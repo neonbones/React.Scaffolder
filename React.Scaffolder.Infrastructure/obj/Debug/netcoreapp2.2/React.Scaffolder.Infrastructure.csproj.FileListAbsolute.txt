@@ -1,9 +1,0 @@
-C:\Users\ASUSX555UB\Documents\Visual Studio 2017\Projects\React.Scaffolder\React.Scaffolder.Infrastructure\bin\Debug\netcoreapp2.2\React.Scaffolder.Infrastructure.deps.json
-C:\Users\ASUSX555UB\Documents\Visual Studio 2017\Projects\React.Scaffolder\React.Scaffolder.Infrastructure\bin\Debug\netcoreapp2.2\React.Scaffolder.Infrastructure.dll
-C:\Users\ASUSX555UB\Documents\Visual Studio 2017\Projects\React.Scaffolder\React.Scaffolder.Infrastructure\bin\Debug\netcoreapp2.2\React.Scaffolder.Infrastructure.pdb
-C:\Users\ASUSX555UB\Documents\Visual Studio 2017\Projects\React.Scaffolder\React.Scaffolder.Infrastructure\obj\Debug\netcoreapp2.2\React.Scaffolder.Infrastructure.csproj.CoreCompileInputs.cache
-C:\Users\ASUSX555UB\Documents\Visual Studio 2017\Projects\React.Scaffolder\React.Scaffolder.Infrastructure\obj\Debug\netcoreapp2.2\React.Scaffolder.Infrastructure.AssemblyInfoInputs.cache
-C:\Users\ASUSX555UB\Documents\Visual Studio 2017\Projects\React.Scaffolder\React.Scaffolder.Infrastructure\obj\Debug\netcoreapp2.2\React.Scaffolder.Infrastructure.AssemblyInfo.cs
-C:\Users\ASUSX555UB\Documents\Visual Studio 2017\Projects\React.Scaffolder\React.Scaffolder.Infrastructure\obj\Debug\netcoreapp2.2\React.Scaffolder.Infrastructure.dll
-C:\Users\ASUSX555UB\Documents\Visual Studio 2017\Projects\React.Scaffolder\React.Scaffolder.Infrastructure\obj\Debug\netcoreapp2.2\React.Scaffolder.Infrastructure.pdb
-C:\Users\ASUSX555UB\Documents\Visual Studio 2017\Projects\React.Scaffolder\React.Scaffolder.Infrastructure\obj\Debug\netcoreapp2.2\React.Scaffolder.Infrastructure.csprojAssemblyReference.cache

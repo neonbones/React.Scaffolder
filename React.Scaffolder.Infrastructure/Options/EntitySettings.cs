@@ -1,13 +1,10 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Text;
+﻿using System.Collections.Generic;
 
 namespace React.Scaffolder.Infrastructure.Options
 {
     public class EntitySettings
     {
         public string Name { get; set; }
-
         public List<Field> Fields { get; set; }
     }
 
@@ -16,6 +13,5 @@ namespace React.Scaffolder.Infrastructure.Options
         public string Name { get; set; }
         public string Label { get; set; }
         public string Type { get; set; }
-
     }
 }
