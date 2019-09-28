@@ -20,7 +20,7 @@ namespace React.Scaffolder.Core.Scaffolders.Redux.Implementation
             var file = folder + @"\service.js";
             
             var sb = new StringBuilder();
-            sb.AppendLine("import { service as crud } from '../../../services/crud.service';");
+            sb.AppendLine($"import {{ service as crud }} from '{_options.Value.CrudService}';");
             sb.AppendLine();
             sb.AppendLine($"const getAll = () => crud.get('{_options.Value.ApiRoute}');");
             sb.AppendLine($"const getById = id => crud.get(`{_options.Value.ApiRoute}/${{id}}`);");

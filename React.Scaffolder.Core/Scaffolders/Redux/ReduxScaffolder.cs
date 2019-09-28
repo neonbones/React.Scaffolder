@@ -8,10 +8,14 @@ namespace React.Scaffolder.Core.Scaffolders.Redux
     {
         public List<IJavaScriptScaffolder<string>> ReduxScaffolders { get; protected set; } = new List<IJavaScriptScaffolder<string>>();
 
-        public ReduxScaffolder(ServiceScaffolder serviceScaffolder, ConstantsScaffolder constantsScaffolder)
+        public ReduxScaffolder(
+            ServiceScaffolder serviceScaffolder, 
+            ConstantsScaffolder constantsScaffolder,
+            ReducerScaffolder reducerScaffolder)
         {
             ReduxScaffolders.Add(serviceScaffolder);
             ReduxScaffolders.Add(constantsScaffolder);
+            ReduxScaffolders.Add(reducerScaffolder);
         }   
 
         public void Scaffold(string folder)

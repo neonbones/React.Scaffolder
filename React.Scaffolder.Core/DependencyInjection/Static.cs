@@ -36,6 +36,7 @@ namespace React.Scaffolder.Core.DependencyInjection
             sc.AddTransient<ServiceScaffolder>();
             sc.AddTransient<ReduxScaffolder>();
             sc.AddTransient<ConstantsScaffolder>();
+            sc.AddTransient<ReducerScaffolder>();
 
             ServiceProvider = sc.BuildServiceProvider();
         }
