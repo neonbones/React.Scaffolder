@@ -56,7 +56,7 @@ namespace React.Scaffolder.Core.DependencyInjection
         public static IConfiguration LoadConfiguration()
             => new ConfigurationBuilder()
                     .SetBasePath(Directory.GetCurrentDirectory())
-                    .AddJsonFile("appsettings.json", false)
+                    .AddJsonFile("ScaffolderSettings.json", false)
                     .Build();
     }
 }
