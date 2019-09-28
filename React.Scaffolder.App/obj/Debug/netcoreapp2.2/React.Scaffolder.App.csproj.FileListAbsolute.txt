@@ -1,0 +1,17 @@
+C:\Users\ASUSX555UB\Documents\Visual Studio 2017\Projects\React.Scaffolder\React.Scaffolder.App\obj\Debug\netcoreapp2.2\React.Scaffolder.App.csproj.CoreCompileInputs.cache
+C:\Users\ASUSX555UB\Documents\Visual Studio 2017\Projects\React.Scaffolder\React.Scaffolder.App\obj\Debug\netcoreapp2.2\React.Scaffolder.App.AssemblyInfoInputs.cache
+C:\Users\ASUSX555UB\Documents\Visual Studio 2017\Projects\React.Scaffolder\React.Scaffolder.App\obj\Debug\netcoreapp2.2\React.Scaffolder.App.AssemblyInfo.cs
+C:\Users\ASUSX555UB\Documents\Visual Studio 2017\Projects\React.Scaffolder\React.Scaffolder.App\bin\Debug\netcoreapp2.2\React.Scaffolder.App.deps.json
+C:\Users\ASUSX555UB\Documents\Visual Studio 2017\Projects\React.Scaffolder\React.Scaffolder.App\bin\Debug\netcoreapp2.2\React.Scaffolder.App.runtimeconfig.json
+C:\Users\ASUSX555UB\Documents\Visual Studio 2017\Projects\React.Scaffolder\React.Scaffolder.App\bin\Debug\netcoreapp2.2\React.Scaffolder.App.runtimeconfig.dev.json
+C:\Users\ASUSX555UB\Documents\Visual Studio 2017\Projects\React.Scaffolder\React.Scaffolder.App\bin\Debug\netcoreapp2.2\React.Scaffolder.App.dll
+C:\Users\ASUSX555UB\Documents\Visual Studio 2017\Projects\React.Scaffolder\React.Scaffolder.App\bin\Debug\netcoreapp2.2\React.Scaffolder.App.pdb
+C:\Users\ASUSX555UB\Documents\Visual Studio 2017\Projects\React.Scaffolder\React.Scaffolder.App\obj\Debug\netcoreapp2.2\React.Scaffolder.App.csprojAssemblyReference.cache
+C:\Users\ASUSX555UB\Documents\Visual Studio 2017\Projects\React.Scaffolder\React.Scaffolder.App\obj\Debug\netcoreapp2.2\React.Scaffolder.App.csproj.CopyComplete
+C:\Users\ASUSX555UB\Documents\Visual Studio 2017\Projects\React.Scaffolder\React.Scaffolder.App\obj\Debug\netcoreapp2.2\React.Scaffolder.App.dll
+C:\Users\ASUSX555UB\Documents\Visual Studio 2017\Projects\React.Scaffolder\React.Scaffolder.App\obj\Debug\netcoreapp2.2\React.Scaffolder.App.pdb
+C:\Users\ASUSX555UB\Documents\Visual Studio 2017\Projects\React.Scaffolder\React.Scaffolder.App\bin\Debug\netcoreapp2.2\React.Scaffolder.Infrastructure.dll
+C:\Users\ASUSX555UB\Documents\Visual Studio 2017\Projects\React.Scaffolder\React.Scaffolder.App\bin\Debug\netcoreapp2.2\React.Scaffolder.Infrastructure.pdb
+C:\Users\ASUSX555UB\Documents\Visual Studio 2017\Projects\React.Scaffolder\React.Scaffolder.App\bin\Debug\netcoreapp2.2\React.Scaffolder.Core.dll
+C:\Users\ASUSX555UB\Documents\Visual Studio 2017\Projects\React.Scaffolder\React.Scaffolder.App\bin\Debug\netcoreapp2.2\React.Scaffolder.Core.pdb
+C:\Users\ASUSX555UB\Documents\Visual Studio 2017\Projects\React.Scaffolder\React.Scaffolder.App\bin\Debug\netcoreapp2.2\appsettings.json
