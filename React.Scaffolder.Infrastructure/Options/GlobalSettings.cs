@@ -4,6 +4,5 @@
     {
         public string ApiRoute { get; set; }
         public string RootFolder { get; set; }
-        public string CrudService { get; set; }
     }
 }

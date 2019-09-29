@@ -8,6 +8,7 @@ using React.Scaffolder.Core.Models;
 using React.Scaffolder.Core.Scaffolders;
 using React.Scaffolder.Core.Scaffolders.Redux;
 using React.Scaffolder.Core.Scaffolders.Redux.Implementation;
+using React.Scaffolder.Core.Scaffolders.Redux.Implementation.Base;
 using React.Scaffolder.Infrastructure;
 using React.Scaffolder.Infrastructure.Options;
 
@@ -37,6 +38,8 @@ namespace React.Scaffolder.Core.DependencyInjection
             sc.AddTransient<ReduxScaffolder>();
             sc.AddTransient<ConstantsScaffolder>();
             sc.AddTransient<ReducerScaffolder>();
+            sc.AddTransient<ActionsScaffolder>();
+            
 
             ServiceProvider = sc.BuildServiceProvider();
         }

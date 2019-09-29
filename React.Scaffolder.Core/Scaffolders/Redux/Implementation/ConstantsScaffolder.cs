@@ -2,38 +2,31 @@
 using System.IO;
 using System.Text;
 using Microsoft.Extensions.Options;
+using React.Scaffolder.Core.Scaffolders.Redux.Implementation.Base;
 using React.Scaffolder.Infrastructure;
 using React.Scaffolder.Infrastructure.Options;
 
 namespace React.Scaffolder.Core.Scaffolders.Redux.Implementation
 {
-    public class ConstantsScaffolder : IJavaScriptScaffolder<string>
+    public class ConstantsScaffolder : ScaffolderAbstractions, IJavaScriptScaffolder<string>
     {
-        private readonly IOptions<EntitySettings> _options;
-        public ConstantsScaffolder(IOptions<EntitySettings> options)
-        {
-            _options = options;
-        }
-
         public void Scaffold(string folder)
         {
             var file = folder + @"\constants.js";
 
-            var entity = _options.Value.Name.ToUpperInvariant();
-
             var sb = new StringBuilder();
             sb.AppendLine("const constants = {");
-            sb.AppendLine($"    {entity}_GETALL_REQUEST:  '{entity}_GETALL_REQUEST',");
-            sb.AppendLine($"    {entity}_GETALL_SUCCESS:  '{entity}_GETALL_SUCCESS',");
-            sb.AppendLine($"    {entity}_GETBYID_REQUEST: '{entity}_GETBYID_REQUEST',");
-            sb.AppendLine($"    {entity}_GETBYID_SUCCESS: '{entity}_GETBYID_SUCCESS',");
-            sb.AppendLine($"    {entity}_CREATE_REQUEST:  '{entity}_CREATE_REQUEST',");
-            sb.AppendLine($"    {entity}_CREATE_SUCCESS:  '{entity}_CREATE_SUCCESS',");
-            sb.AppendLine($"    {entity}_UPDATE_REQUEST:  '{entity}_UPDATE_REQUEST',");
-            sb.AppendLine($"    {entity}_UPDATE_SUCCESS:  '{entity}_UPDATE_SUCCESS',");
-            sb.AppendLine($"    {entity}_DELETE_REQUEST:  '{entity}_DELETE_REQUEST',");
-            sb.AppendLine($"    {entity}_DELETE_SUCCESS:  '{entity}_DELETE_SUCCESS',");
-            sb.AppendLine($"    {entity}_LOADED:          '{entity}_LOADED'");
+            sb.AppendLine($"    {UpperEnitity}_GETALL_REQUEST:  '{UpperEnitity}_GETALL_REQUEST',");
+            sb.AppendLine($"    {UpperEnitity}_GETALL_SUCCESS:  '{UpperEnitity}_GETALL_SUCCESS',");
+            sb.AppendLine($"    {UpperEnitity}_GETBYID_REQUEST: '{UpperEnitity}_GETBYID_REQUEST',");
+            sb.AppendLine($"    {UpperEnitity}_GETBYID_SUCCESS: '{UpperEnitity}_GETBYID_SUCCESS',");
+            sb.AppendLine($"    {UpperEnitity}_CREATE_REQUEST:  '{UpperEnitity}_CREATE_REQUEST',");
+            sb.AppendLine($"    {UpperEnitity}_CREATE_SUCCESS:  '{UpperEnitity}_CREATE_SUCCESS',");
+            sb.AppendLine($"    {UpperEnitity}_UPDATE_REQUEST:  '{UpperEnitity}_UPDATE_REQUEST',");
+            sb.AppendLine($"    {UpperEnitity}_UPDATE_SUCCESS:  '{UpperEnitity}_UPDATE_SUCCESS',");
+            sb.AppendLine($"    {UpperEnitity}_DELETE_REQUEST:  '{UpperEnitity}_DELETE_REQUEST',");
+            sb.AppendLine($"    {UpperEnitity}_DELETE_SUCCESS:  '{UpperEnitity}_DELETE_SUCCESS',");
+            sb.AppendLine($"    {UpperEnitity}_LOADED:          '{UpperEnitity}_LOADED'");
             sb.AppendLine("};");
             sb.AppendLine();
             sb.AppendLine("export default constants;");
@@ -45,6 +38,10 @@ namespace React.Scaffolder.Core.Scaffolders.Redux.Implementation
             }
 
             Console.WriteLine(@"redux\constants.js scaffolded.");
+        }
+
+        public ConstantsScaffolder(IOptions<EntitySettings> e, IOptions<GlobalSettings> g) : base(e, g)
+        {
         }
     }
 }

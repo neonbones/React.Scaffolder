@@ -1,4 +1,5 @@
 ﻿using System.Collections.Generic;
+using System.Threading.Tasks;
 using React.Scaffolder.Core.Scaffolders.Redux.Implementation;
 using React.Scaffolder.Infrastructure;
 
@@ -6,24 +7,22 @@ namespace React.Scaffolder.Core.Scaffolders.Redux
 {
     public class ReduxScaffolder : IJavaScriptScaffolder<string>
     {
-        public List<IJavaScriptScaffolder<string>> ReduxScaffolders { get; protected set; } = new List<IJavaScriptScaffolder<string>>();
-
         public ReduxScaffolder(
-            ServiceScaffolder serviceScaffolder, 
-            ConstantsScaffolder constantsScaffolder,
-            ReducerScaffolder reducerScaffolder)
+            ServiceScaffolder service,
+            ConstantsScaffolder constants,
+            ReducerScaffolder reducer,
+            ActionsScaffolder actions)
         {
-            ReduxScaffolders.Add(serviceScaffolder);
-            ReduxScaffolders.Add(constantsScaffolder);
-            ReduxScaffolders.Add(reducerScaffolder);
-        }   
+            _reduxScaffolders.Add(service);
+            _reduxScaffolders.Add(constants);
+            _reduxScaffolders.Add(reducer);
+            _reduxScaffolders.Add(actions);
+        }
+
+        private readonly List<IJavaScriptScaffolder<string>> _reduxScaffolders =
+            new List<IJavaScriptScaffolder<string>>();
 
         public void Scaffold(string folder)
-        {
-            foreach (var javaScriptScaffolder in ReduxScaffolders)
-            {
-                javaScriptScaffolder.Scaffold(folder);
-            }
-        }
+            => Parallel.ForEach(_reduxScaffolders, scaffolder => scaffolder.Scaffold(folder));
     }
 }

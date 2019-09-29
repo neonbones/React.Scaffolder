@@ -27,11 +27,11 @@ namespace React.Scaffolder.Core.Scaffolders
 
         public Dictionary<FolderTypes, string> FeatureDirectories(string folder)
             => new Dictionary<FolderTypes, string>
-                {
-                    {FolderTypes.Containers, folder + @"\containers"},
-                    {FolderTypes.Redux, folder + @"\redux"},
-                    {FolderTypes.Schemas, folder + @"\schemas"},
-                    {FolderTypes.Views, folder + @"\views"}
-                };       
+            {
+                {FolderTypes.Containers, folder + @"\containers"},
+                {FolderTypes.Redux, folder + @"\redux"},
+                {FolderTypes.Schemas, folder + @"\schemas"},
+                {FolderTypes.Views, folder + @"\views"}
+            };
     }
 }

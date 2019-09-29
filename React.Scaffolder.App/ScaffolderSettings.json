@@ -1,20 +1,17 @@
 {
   "GlobalSettings": {
     "ApiRoute": "Administrator/Posts",
-    "RootFolder": "D:\\Practice\\Journeyman\\Journeyman.Web\\react\\",
-    "CrudService": "../../../services/crud.service"
+    "RootFolder": "D:\\Practice\\Journeyman\\Journeyman.Web\\react\\"
   },
   "EntitySettings": {
-    "Name": "Posts",
+    "Entity": "Posts",
     "Fields": [
       {
         "Name": "name",
-        "Label": "Name",
         "Type": "text"
       },
       {
         "Name": "content",
-        "Label": "Content",
         "Type": "text"
       }
     ]
