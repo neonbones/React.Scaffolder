@@ -1,14 +1,19 @@
 ﻿using System.Collections.Generic;
 using System.Linq;
+using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Options;
-using React.Scaffolder.Infrastructure.Options;
+using React.Scaffolder.Core.DependencyInjection;
+using React.Scaffolder.Domain.Options;
 
 namespace React.Scaffolder.Core.Scaffolders.Redux.Implementation.Base
 {
     public abstract class ScaffolderAbstractions
     {
-        protected ScaffolderAbstractions(IOptions<EntitySettings> e, IOptions<GlobalSettings> g)
+        protected ScaffolderAbstractions()
         {
+            var e = Static.ServiceProvider.GetService<IOptions<EntitySettings>>();
+            var g = Static.ServiceProvider.GetService<IOptions<GlobalSettings>>();
+
             UpperEnitity = e.Value.Entity.ToUpperInvariant();
             LowerEntity = e.Value.Entity.ToLowerInvariant();
             Fields = e.Value.Fields;

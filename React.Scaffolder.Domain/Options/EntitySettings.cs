@@ -1,6 +1,6 @@
 ﻿using System.Collections.Generic;
 
-namespace React.Scaffolder.Infrastructure.Options
+namespace React.Scaffolder.Domain.Options
 {
     public class EntitySettings
     {

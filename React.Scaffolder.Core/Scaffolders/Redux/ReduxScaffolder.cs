@@ -13,16 +13,15 @@ namespace React.Scaffolder.Core.Scaffolders.Redux
             ReducerScaffolder reducer,
             ActionsScaffolder actions)
         {
-            _reduxScaffolders.Add(service);
-            _reduxScaffolders.Add(constants);
-            _reduxScaffolders.Add(reducer);
-            _reduxScaffolders.Add(actions);
+            _scaffolders.Add(service);
+            _scaffolders.Add(constants);
+            _scaffolders.Add(reducer);
+            _scaffolders.Add(actions);
         }
 
-        private readonly List<IJavaScriptScaffolder<string>> _reduxScaffolders =
+        private readonly List<IJavaScriptScaffolder<string>> _scaffolders =
             new List<IJavaScriptScaffolder<string>>();
 
-        public void Scaffold(string folder)
-            => Parallel.ForEach(_reduxScaffolders, scaffolder => scaffolder.Scaffold(folder));
+        public void Scaffold(string folder) => _scaffolders.PipeToParallel(x => x.Scaffold(folder));
     }
 }

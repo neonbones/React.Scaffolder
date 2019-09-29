@@ -1,4 +1,4 @@
-﻿namespace React.Scaffolder.Infrastructure.Options
+﻿namespace React.Scaffolder.Domain.Options
 {
     public class GlobalSettings
     {

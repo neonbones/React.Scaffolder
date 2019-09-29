@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.IO;
-using React.Scaffolder.Core.Models;
+using React.Scaffolder.Domain.Models;
 using React.Scaffolder.Infrastructure;
 
 namespace React.Scaffolder.Core.Scaffolders

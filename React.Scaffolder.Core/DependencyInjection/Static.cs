@@ -1,32 +1,29 @@
 ﻿using System;
-using System.Collections.Generic;
 using System.IO;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using React.Scaffolder.Core.Interfaces;
-using React.Scaffolder.Core.Models;
 using React.Scaffolder.Core.Scaffolders;
 using React.Scaffolder.Core.Scaffolders.Redux;
 using React.Scaffolder.Core.Scaffolders.Redux.Implementation;
-using React.Scaffolder.Core.Scaffolders.Redux.Implementation.Base;
-using React.Scaffolder.Infrastructure;
-using React.Scaffolder.Infrastructure.Options;
+using React.Scaffolder.Domain.Options;
 
 namespace React.Scaffolder.Core.DependencyInjection
 {
     public static class Static
     {
         public static IServiceProvider ServiceProvider;
-        public static IConfiguration Configuration { get; }
 
         static Static()
         {
             Configuration = LoadConfiguration();
         }
 
+        public static IConfiguration Configuration { get; }
+
         public static void RegisterServices()
         {
-            var sc = new ServiceCollection();    
+            var sc = new ServiceCollection();
 
             sc.AddOptions();
             sc.Configure<GlobalSettings>(Configuration.GetSection("GlobalSettings"));
@@ -39,7 +36,6 @@ namespace React.Scaffolder.Core.DependencyInjection
             sc.AddTransient<ConstantsScaffolder>();
             sc.AddTransient<ReducerScaffolder>();
             sc.AddTransient<ActionsScaffolder>();
-            
 
             ServiceProvider = sc.BuildServiceProvider();
         }
@@ -58,8 +54,8 @@ namespace React.Scaffolder.Core.DependencyInjection
 
         public static IConfiguration LoadConfiguration()
             => new ConfigurationBuilder()
-                    .SetBasePath(Directory.GetCurrentDirectory())
-                    .AddJsonFile("ScaffolderSettings.json", false)
-                    .Build();
+                .SetBasePath(Directory.GetCurrentDirectory())
+                .AddJsonFile("ScaffolderSettings.json", false)
+                .Build();
     }
 }

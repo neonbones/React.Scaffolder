@@ -1,10 +1,8 @@
 ﻿using System;
 using System.IO;
 using System.Text;
-using Microsoft.Extensions.Options;
 using React.Scaffolder.Core.Scaffolders.Redux.Implementation.Base;
 using React.Scaffolder.Infrastructure;
-using React.Scaffolder.Infrastructure.Options;
 
 namespace React.Scaffolder.Core.Scaffolders.Redux.Implementation
 {
@@ -34,10 +32,6 @@ namespace React.Scaffolder.Core.Scaffolders.Redux.Implementation
             }
 
             Console.WriteLine(@"redux\service.js scaffolded.");
-        }
-
-        public ServiceScaffolder(IOptions<EntitySettings> e, IOptions<GlobalSettings> g) : base(e, g)
-        {
         }
     }
 }

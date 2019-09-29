@@ -1,8 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Text;
-
-namespace React.Scaffolder.Core.Models
+﻿namespace React.Scaffolder.Domain.Models
 {
     public enum FolderTypes
     {
