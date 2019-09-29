@@ -1,8 +1,8 @@
 ﻿using System;
 using React.Scaffolder.Core.Interfaces;
-using React.Scaffolder.Core.Scaffolders;
 using React.Scaffolder.Core.Scaffolders.Redux;
 using React.Scaffolder.Core.Scaffolders.Redux.Implementation.Base;
+using React.Scaffolder.Domain;
 using React.Scaffolder.Domain.Models;
 using React.Scaffolder.Infrastructure;
 
@@ -10,19 +10,11 @@ namespace React.Scaffolder.Core
 {
     public class Scaffolder : ScaffolderAbstractions, IScaffolder
     {
-        private readonly FoldersHandler _foldersHandler;
         private readonly ReduxScaffolder _reduxRootScaffolder;
-
-        public Scaffolder(
-            ReduxScaffolder reduxRootScaffolder,
-            FoldersHandler foldersHandler)
-        {
-            _reduxRootScaffolder = reduxRootScaffolder;
-            _foldersHandler = foldersHandler;
-        }
+        public Scaffolder(ReduxScaffolder reduxRootScaffolder) => _reduxRootScaffolder = reduxRootScaffolder;
 
         public void Run()
-            => RootFolder.PipeTo(_foldersHandler).ForEach(x =>
+            => RootFolder.ToFeatures(LowerEntity).ForEach(x =>
             {
                 switch (x.Key)
                 {
@@ -34,8 +26,6 @@ namespace React.Scaffolder.Core
                         _reduxRootScaffolder.Scaffold(x.Value);
                         break;
                     case FolderTypes.Schemas:
-                        break;
-                    case FolderTypes.Feature:
                         break;
                     default:
                         throw new ArgumentOutOfRangeException();

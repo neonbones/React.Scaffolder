@@ -30,7 +30,6 @@ namespace React.Scaffolder.Core.DependencyInjection
             sc.Configure<EntitySettings>(Configuration.GetSection("EntitySettings"));
 
             sc.AddTransient<IScaffolder, Scaffolder>();
-            sc.AddTransient<FoldersHandler>();
             sc.AddTransient<ServiceScaffolder>();
             sc.AddTransient<ReduxScaffolder>();
             sc.AddTransient<ConstantsScaffolder>();
