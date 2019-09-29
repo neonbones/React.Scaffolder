@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.IO;
 using System.Linq;
 using System.Threading.Tasks;
+using React.Scaffolder.Domain.Models;
 
 namespace React.Scaffolder.Infrastructure
 {
@@ -14,6 +15,33 @@ namespace React.Scaffolder.Infrastructure
             if (result == null)
                 throw new FileNotFoundException();
             return result;
+        }
+
+        public static Dictionary<FolderTypes, string> ToFeatures(this string root)
+        {
+            if (!Directory.Exists(root))
+                throw new FileNotFoundException("Root directory not found.");
+
+            var feature = root.Cd("src").Cd("features") + @"\posts";
+            if (Directory.Exists(feature))
+                throw new InvalidOperationException("Directory already exists.");
+
+            return new Dictionary<FolderTypes, string>
+            {
+                {FolderTypes.Feature, feature},
+                {FolderTypes.Containers, feature + @"\containers"},
+                {FolderTypes.Redux, feature + @"\redux"},
+                {FolderTypes.Schemas, feature + @"\schemas"},
+                {FolderTypes.Views, feature + @"\views"}
+            };
+        }
+
+        public static IEnumerable<T> ForEachInner<T>(this IEnumerable<T> inner, Action<T> a)
+        {
+            var array = inner.ToArray();
+            foreach (var e in array) a(e);
+
+            return array;
         }
 
         public static void ForEach<T>(this IEnumerable<T> inner, Action<T> a)

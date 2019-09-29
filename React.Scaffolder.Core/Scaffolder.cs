@@ -35,6 +35,8 @@ namespace React.Scaffolder.Core
                         break;
                     case FolderTypes.Schemas:
                         break;
+                    case FolderTypes.Feature:
+                        break;
                     default:
                         throw new ArgumentOutOfRangeException();
                 }

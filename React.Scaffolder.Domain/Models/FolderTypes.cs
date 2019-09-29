@@ -2,7 +2,8 @@
 {
     public enum FolderTypes
     {
-        Containers = 1,
+        Feature = 1,
+        Containers,
         Views,
         Redux,
         Schemas
